@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Twitter\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Twitter\\.nuget\\packages"
+    ]
+  }
+}
