@@ -11,24 +11,24 @@ namespace myuser.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class UserController : ControllerBase
     {
-        Iuser Nawras = null;
+        Iuser depInjec = null;
 
-        public ValuesController(Iuser first)
+        public UserController(Iuser Iu)
         {
-            this.Nawras = first;
+            this.depInjec = Iu;
         }
         [HttpGet]
         public List<User> getall()
         {
-            return Nawras.getall();
+            return depInjec.getall();
         }
 
         [HttpGet("{id}")]
         public User get(int id)
         {
-            return Nawras.get(id);
+            return depInjec.get(id);
         }
         /*
             public void put([FromBody] User USRRR)
@@ -40,13 +40,13 @@ namespace myuser.Controllers
         [HttpPost]
         public void addUser([FromBody] User u)
         {
-                Nawras.addUser(u);
+            depInjec.addUser(u);
         }
 
         [HttpDelete("{id}")]
         public void DeleteUser(int id)
         {
-            Nawras.DeleteUser(id);
+            depInjec.DeleteUser(id);
 
         }
         /*
